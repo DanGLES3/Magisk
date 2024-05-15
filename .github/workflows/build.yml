@@ -80,7 +80,6 @@ jobs:
 
       # Only upload artifacts built on Linux
       - name: Upload build artifact
-        if: runner.os == 'Linux'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.sha }}
@@ -88,7 +87,6 @@ jobs:
           compression-level: 9
 
       - name: Upload mapping and native debug symbols
-        if: runner.os == 'Linux'
         uses: actions/upload-artifact@v4
         with:
           name: ${{ github.sha }}-symbols
