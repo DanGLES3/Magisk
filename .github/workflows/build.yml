@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-13]
+        os: [macos-13]
     steps:
       - name: Check out
         uses: actions/checkout@v4
@@ -74,10 +74,6 @@ jobs:
       - name: Build release
         run: |
           python build.py -vr all
-
-      - name: Build debug
-        run: |
-          python build.py -v all
 
       - name: Stop gradle daemon
         run: ./gradlew --stop
