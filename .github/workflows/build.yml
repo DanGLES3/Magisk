@@ -11,7 +11,7 @@ on:
       - "gradle.properties"
       - ".github/workflows/build.yml"
   pull_request:
-    branches: [master]
+    branches: [kitsune-v27001]
   workflow_dispatch:
 
 jobs:
